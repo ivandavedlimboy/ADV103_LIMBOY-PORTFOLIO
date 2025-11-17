@@ -57,27 +57,27 @@ const Profile = () => {
       <ProfileSubheader />
       <div className="bg-card">
         {/* All sections displayed continuously with IDs for anchor linking */}
-        <section id="personal">
+        <section id="personal" className="scroll-mt-16">
           <PersonalInfo />
         </section>
         
-        <section id="contact">
+        <section id="contact" className="scroll-mt-16">
           <Contacts />
         </section>
         
-        <section id="education">
+        <section id="education" className="scroll-mt-16">
           <Education />
         </section>
         
-        <section id="awards">
+        <section id="awards" className="scroll-mt-16">
           <Achievements />
         </section>
         
-        <section id="experience">
+        <section id="experience" className="scroll-mt-16">
           <Experience />
         </section>
         
-        <section id="certifications">
+        <section id="certifications" className="scroll-mt-16">
           <Certifications />
         </section>
       </div>
