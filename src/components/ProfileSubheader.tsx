@@ -20,12 +20,14 @@ export const ProfileSubheader = () => {
         element: document.getElementById(tab.id),
       }));
 
-      // Find which section is currently in view
-      for (const section of sections) {
+      // Find which section is currently in view with better accuracy
+      const scrollPosition = window.scrollY + 100; // Offset for header
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
         if (section.element) {
-          const rect = section.element.getBoundingClientRect();
-          // Check if section is in the upper half of viewport
-          if (rect.top <= 200 && rect.bottom >= 200) {
+          const sectionTop = section.element.offsetTop;
+          if (scrollPosition >= sectionTop - 10) {
             setActiveTab(section.id);
             break;
           }
@@ -33,6 +35,7 @@ export const ProfileSubheader = () => {
       }
     };
 
+    handleScroll(); // Initial check
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -40,14 +43,17 @@ export const ProfileSubheader = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80; // Account for subheader height
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - offset;
+      // Get the subheader height dynamically
+      const subheaderHeight = 60; // Approximate subheader height
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - subheaderHeight;
 
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth",
       });
+      
+      setActiveTab(id);
     }
   };
 
