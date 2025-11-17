@@ -40,25 +40,25 @@ export const Certifications = () => {
   };
 
   return (
-    <div className="animate-fade-in p-8">
+    <div className="animate-fade-in p-4 sm:p-6 lg:p-8">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Certifications</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8 text-center">Certifications</h2>
 
         <div className="relative">
           {/* Main Certificate Display */}
-          <div className="bg-gradient-to-br from-card to-portfolio-warm-light rounded-lg p-10 shadow-xl border-2 border-accent/20 min-h-[320px] flex flex-col justify-center">
+          <div className="bg-gradient-to-br from-card to-portfolio-warm-light rounded-lg p-6 sm:p-8 lg:p-10 shadow-xl border-2 border-accent/20 min-h-[280px] sm:min-h-[320px] flex flex-col justify-center">
             <div className="text-center">
-              <Award className="w-20 h-20 text-accent mb-6 mx-auto animate-scale-in" />
-              <h3 className="text-3xl font-bold text-foreground mb-3">
+              <Award className="w-16 h-16 sm:w-20 sm:h-20 text-accent mb-4 sm:mb-6 mx-auto animate-scale-in" />
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
                 {certifications[currentIndex].title}
               </h3>
-              <p className="text-xl text-accent font-semibold mb-2">
+              <p className="text-lg sm:text-xl text-accent font-semibold mb-2">
                 {certifications[currentIndex].issuer}
               </p>
-              <p className="text-muted-foreground font-medium mb-4">
+              <p className="text-sm sm:text-base text-muted-foreground font-medium mb-4">
                 {certifications[currentIndex].year}
               </p>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto px-4">
                 {certifications[currentIndex].description}
               </p>
             </div>

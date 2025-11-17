@@ -20,17 +20,17 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background p-8">
+    <div className="min-h-screen bg-background p-4 sm:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-12 text-center animate-fade-in">
-          <h1 className="text-5xl font-bold text-foreground mb-4">Gallery</h1>
-          <p className="text-xl text-muted-foreground">
+        <div className="mb-8 sm:mb-12 text-center animate-fade-in">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">Gallery</h1>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground">
             A collection of my work and inspirations
           </p>
         </div>
 
         {/* Responsive Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
           {images.map((image, index) => (
             <div
               key={index}

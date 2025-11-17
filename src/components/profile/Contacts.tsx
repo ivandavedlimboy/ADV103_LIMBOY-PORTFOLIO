@@ -47,10 +47,10 @@ export const Contacts = () => {
   ];
 
   return (
-    <div className="animate-fade-in p-8">
+    <div className="animate-fade-in p-4 sm:p-6 lg:p-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Get In Touch</h2>
-        <div className="grid sm:grid-cols-2 gap-4">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8 text-center">Get In Touch</h2>
+        <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
           {contacts.map((contact, index) => {
             const Icon = contact.icon;
             return (
@@ -59,7 +59,7 @@ export const Contacts = () => {
                 href={contact.link}
                 target={contact.link.startsWith("http") ? "_blank" : undefined}
                 rel={contact.link.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="group bg-card rounded-lg p-6 shadow-sm border border-border hover:shadow-md transition-all duration-200 hover:-translate-y-1 animate-scale-in"
+                className="group bg-card rounded-lg p-4 sm:p-6 shadow-sm border border-border hover:shadow-md transition-all duration-200 hover:-translate-y-1 animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start gap-4">

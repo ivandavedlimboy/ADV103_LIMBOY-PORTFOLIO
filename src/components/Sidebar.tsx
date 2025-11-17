@@ -1,10 +1,13 @@
-import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ChevronLeft, ChevronRight, User, Image, BookOpen } from "lucide-react";
+import { ChevronLeft, ChevronRight, User, Image, BookOpen, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export const Sidebar = () => {
-  const [collapsed, setCollapsed] = useState(false);
+interface SidebarProps {
+  collapsed: boolean;
+  setCollapsed: (collapsed: boolean) => void;
+}
+
+export const Sidebar = ({ collapsed, setCollapsed }: SidebarProps) => {
   const location = useLocation();
 
   const navItems = [
@@ -14,24 +17,47 @@ export const Sidebar = () => {
   ];
 
   return (
-    <aside
-      className={cn(
-        "fixed left-0 top-0 h-screen bg-sidebar border-r border-sidebar-border transition-all duration-300 z-50 flex flex-col",
-        collapsed ? "w-16" : "w-64"
+    <>
+      {/* Mobile Overlay */}
+      {!collapsed && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          onClick={() => setCollapsed(true)}
+        />
       )}
-    >
-      {/* Toggle Button */}
-      <button
-        onClick={() => setCollapsed(!collapsed)}
-        className="absolute -right-3 top-6 bg-sidebar border border-sidebar-border rounded-full p-1 hover:bg-sidebar-accent transition-colors"
-        aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-      >
-        {collapsed ? (
-          <ChevronRight className="w-4 h-4 text-sidebar-foreground" />
-        ) : (
-          <ChevronLeft className="w-4 h-4 text-sidebar-foreground" />
+
+      <aside
+        className={cn(
+          "fixed left-0 top-0 h-screen bg-sidebar border-r border-sidebar-border transition-all duration-300 z-50 flex flex-col",
+          // Desktop behavior
+          "hidden md:flex",
+          collapsed ? "md:w-16" : "md:w-64",
+          // Mobile behavior - full overlay
+          "md:relative",
+          !collapsed && "flex w-64"
         )}
-      </button>
+      >
+        {/* Toggle Button - Desktop */}
+        <button
+          onClick={() => setCollapsed(!collapsed)}
+          className="absolute -right-3 top-6 bg-sidebar border border-sidebar-border rounded-full p-1 hover:bg-sidebar-accent transition-colors hidden md:flex"
+          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+        >
+          {collapsed ? (
+            <ChevronRight className="w-4 h-4 text-sidebar-foreground" />
+          ) : (
+            <ChevronLeft className="w-4 h-4 text-sidebar-foreground" />
+          )}
+        </button>
+
+        {/* Close Button - Mobile */}
+        <button
+          onClick={() => setCollapsed(true)}
+          className="absolute right-4 top-6 md:hidden text-sidebar-foreground hover:text-sidebar-accent transition-colors"
+          aria-label="Close sidebar"
+        >
+          <X className="w-5 h-5" />
+        </button>
 
       {/* Logo/Title Area */}
       <div className="p-6 border-b border-sidebar-border">
@@ -91,6 +117,19 @@ export const Sidebar = () => {
           {collapsed ? "©2024" : "© 2024 Ivan Dave Limboy"}
         </p>
       </div>
-    </aside>
+      </aside>
+
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setCollapsed(false)}
+        className={cn(
+          "fixed top-4 left-4 z-30 md:hidden bg-sidebar border border-sidebar-border rounded-lg p-2 shadow-lg",
+          !collapsed && "hidden"
+        )}
+        aria-label="Open menu"
+      >
+        <User className="w-5 h-5 text-sidebar-foreground" />
+      </button>
+    </>
   );
 };

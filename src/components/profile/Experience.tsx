@@ -30,11 +30,11 @@ export const Experience = () => {
   ];
 
   return (
-    <div className="animate-fade-in p-8">
-      <div className="grid lg:grid-cols-2 gap-8">
+    <div className="animate-fade-in p-4 sm:p-6 lg:p-8">
+      <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
         {/* Experience */}
-        <div className="bg-card rounded-lg p-6 shadow-sm border border-border">
-          <h2 className="text-2xl font-bold text-foreground mb-6">Experience</h2>
+        <div className="bg-card rounded-lg p-4 sm:p-6 shadow-sm border border-border">
+          <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Experience</h2>
           <div className="space-y-6">
             {experiences.map((exp, index) => (
               <div
@@ -52,8 +52,8 @@ export const Experience = () => {
         </div>
 
         {/* IT Skills */}
-        <div className="bg-portfolio-warm-light rounded-lg p-6 shadow-sm border border-border">
-          <h2 className="text-2xl font-bold text-foreground mb-6">IT Skills</h2>
+        <div className="bg-portfolio-warm-light rounded-lg p-4 sm:p-6 shadow-sm border border-border">
+          <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">IT Skills</h2>
           <div className="space-y-6">
             {itSkills.map((item, index) => (
               <div
