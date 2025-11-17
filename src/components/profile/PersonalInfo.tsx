@@ -20,11 +20,11 @@ export const PersonalInfo = () => {
   ];
 
   return (
-    <div className="animate-fade-in p-8">
-      <div className="grid md:grid-cols-2 gap-8">
+    <div className="animate-fade-in p-4 sm:p-6 lg:p-8">
+      <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
         {/* Personal Details */}
-        <div className="bg-card rounded-lg p-6 shadow-sm border border-border">
-          <h2 className="text-2xl font-bold text-foreground mb-6">Personal Details</h2>
+        <div className="bg-card rounded-lg p-4 sm:p-6 shadow-sm border border-border">
+          <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Personal Details</h2>
           <dl className="space-y-4">
             {personalDetails.map((detail) => (
               <div key={detail.label} className="flex flex-col">
@@ -38,8 +38,8 @@ export const PersonalInfo = () => {
         </div>
 
         {/* Traits & Characteristics */}
-        <div className="bg-portfolio-warm-light rounded-lg p-6 shadow-sm border border-border">
-          <h2 className="text-2xl font-bold text-foreground mb-6">Traits & Characteristics</h2>
+        <div className="bg-portfolio-warm-light rounded-lg p-4 sm:p-6 shadow-sm border border-border">
+          <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Traits & Characteristics</h2>
           <div className="flex flex-wrap gap-3">
             {traits.map((trait, index) => (
               <span

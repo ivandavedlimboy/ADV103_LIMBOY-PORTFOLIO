@@ -31,21 +31,21 @@ export const Achievements = () => {
   };
 
   return (
-    <div className="animate-fade-in p-8">
+    <div className="animate-fade-in p-4 sm:p-6 lg:p-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Achievements</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8 text-center">Achievements</h2>
 
-        <div className="relative bg-gradient-to-br from-portfolio-warm-light to-card rounded-lg p-8 shadow-lg border border-border">
+        <div className="relative bg-gradient-to-br from-portfolio-warm-light to-card rounded-lg p-4 sm:p-6 lg:p-8 shadow-lg border border-border">
           {/* Achievement Card */}
-          <div className="text-center min-h-[280px] flex flex-col items-center justify-center">
-            <Award className="w-16 h-16 text-accent mb-6 animate-scale-in" />
-            <h3 className="text-2xl font-bold text-foreground mb-2">
+          <div className="text-center min-h-[240px] sm:min-h-[280px] flex flex-col items-center justify-center">
+            <Award className="w-12 h-12 sm:w-16 sm:h-16 text-accent mb-4 sm:mb-6 animate-scale-in" />
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
               {achievements[currentIndex].title}
             </h3>
-            <p className="text-accent font-semibold text-lg mb-4">
+            <p className="text-accent font-semibold text-base sm:text-lg mb-3 sm:mb-4">
               {achievements[currentIndex].year}
             </p>
-            <p className="text-muted-foreground max-w-md">
+            <p className="text-sm sm:text-base text-muted-foreground max-w-md px-4">
               {achievements[currentIndex].description}
             </p>
           </div>

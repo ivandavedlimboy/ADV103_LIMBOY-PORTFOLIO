@@ -31,30 +31,30 @@ const Journal = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="bg-gradient-to-br from-portfolio-warm-light to-card p-12 border-b border-border">
+      <div className="bg-gradient-to-br from-portfolio-warm-light to-card p-6 sm:p-10 lg:p-12 border-b border-border">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <BookOpen className="w-16 h-16 text-accent mx-auto mb-4" />
-          <h1 className="text-5xl font-bold text-foreground mb-4">Journal</h1>
-          <p className="text-xl text-muted-foreground italic">
+          <BookOpen className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-accent mx-auto mb-3 sm:mb-4" />
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">Journal</h1>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground italic">
             Thoughts, reflections, and learnings along the way
           </p>
         </div>
       </div>
 
       {/* Journal Entries */}
-      <div className="max-w-4xl mx-auto p-8">
-        <div className="space-y-8">
+      <div className="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
+        <div className="space-y-6 sm:space-y-8">
           {entries.map((entry, index) => (
             <article
               key={index}
-              className="bg-card rounded-lg p-8 shadow-sm border border-border hover:shadow-md transition-shadow duration-200 animate-fade-in"
+              className="bg-card rounded-lg p-4 sm:p-6 lg:p-8 shadow-sm border border-border hover:shadow-md transition-shadow duration-200 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <time className="text-sm text-accent font-medium">{entry.date}</time>
-              <h2 className="text-2xl font-bold text-foreground mt-2 mb-4">
+              <time className="text-xs sm:text-sm text-accent font-medium">{entry.date}</time>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-2 mb-3 sm:mb-4">
                 {entry.title}
               </h2>
-              <p className="text-muted-foreground leading-relaxed">{entry.content}</p>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{entry.content}</p>
             </article>
           ))}
         </div>
