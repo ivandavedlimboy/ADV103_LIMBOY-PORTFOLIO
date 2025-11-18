@@ -151,7 +151,7 @@ const Journal = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="flex flex-col md:flex-row h-[calc(100vh-280px)] overflow-hidden">
+      <div className="flex flex-col md:flex-row h-[calc(100vh-280px)] overflow-hidden gap-4 px-4">
         {/* Journal List */}
         <div
           className={`
@@ -161,7 +161,7 @@ const Journal = () => {
                 ? "md:w-1/4 h-20 md:h-full overflow-y-auto"
                 : "w-full h-full overflow-y-auto"
             }
-            bg-card border-r border-border
+            bg-background
             [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
           `}
         >
@@ -174,8 +174,8 @@ const Journal = () => {
                   w-full text-left p-4 rounded-lg transition-all duration-200
                   ${
                     selectedJournal === journal.id
-                      ? "bg-accent/10 border-2 border-accent"
-                      : "bg-muted hover:bg-muted/70 border-2 border-transparent"
+                      ? "bg-primary/10 border-2 border-primary shadow-md"
+                      : "bg-card hover:bg-card/80 border-2 border-border/50 shadow-sm"
                   }
                 `}
               >
@@ -192,7 +192,7 @@ const Journal = () => {
         {selectedJournal && selectedEntry && (
           <div
             className={`
-              flex-1 bg-card border-2 border-border overflow-y-auto
+              flex-1 bg-card rounded-xl shadow-lg overflow-y-auto
               [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
               animate-fade-in
             `}
