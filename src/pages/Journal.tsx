@@ -1,72 +1,217 @@
 import { BookOpen } from "lucide-react";
+import { useState } from "react";
+
+interface JournalEntry {
+  id: string;
+  title: string;
+  date: string;
+  content: React.ReactNode;
+}
 
 const Journal = () => {
-  const entries = [
+  const [selectedJournal, setSelectedJournal] = useState<string | null>(null);
+
+  const journals: JournalEntry[] = [
     {
-      date: "November 15, 2024",
-      title: "Reflections on Learning React",
-      content:
-        "Today I've been diving deeper into React hooks and the component lifecycle. The more I learn, the more I appreciate the elegance of React's design patterns. Building this portfolio has been an incredible learning experience.",
+      id: "pldt",
+      title: "PLDT INC",
+      date: "November 14, 2025",
+      content: (
+        <div className="space-y-6">
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">Project Overview</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              During my time at PLDT INC, I had the opportunity to work on transformative telecommunications 
+              infrastructure projects. The experience shaped my understanding of large-scale network systems 
+              and their critical role in connecting communities across the Philippines.
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">Key Learnings</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Working with enterprise-level telecommunications taught me the importance of reliability, 
+              scalability, and continuous monitoring. Every system we built had to maintain 99.9% uptime, 
+              which required meticulous planning and robust architecture.
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">Technical Growth</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              I deepened my expertise in network protocols, infrastructure management, and real-time 
+              communication systems. The challenges we faced pushed me to innovate and think critically 
+              about system design and optimization.
+            </p>
+          </div>
+        </div>
+      ),
     },
     {
-      date: "November 10, 2024",
-      title: "Design Philosophy",
-      content:
-        "I've been thinking a lot about design lately. The best interfaces are invisible - they simply work. My goal is to create experiences that feel natural and intuitive, where technology fades into the background.",
+      id: "vitro",
+      title: "VITRO",
+      date: "November 14, 2025",
+      content: (
+        <div className="space-y-6">
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">Innovation at VITRO</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              VITRO presented unique challenges in digital transformation and modern web technologies. 
+              This experience allowed me to explore cutting-edge frameworks and development methodologies.
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">Reflections</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              The projects at VITRO reinforced the importance of user-centric design and agile development. 
+              Every feature we shipped had to balance technical excellence with practical usability.
+            </p>
+          </div>
+        </div>
+      ),
     },
     {
-      date: "November 5, 2024",
-      title: "Journey into Web Development",
-      content:
-        "Starting this journey in web development has been transformative. Every project teaches me something new, and every challenge makes me a better developer. The community is incredibly supportive, and I'm grateful for all the resources available.",
+      id: "vitro-jairosoft",
+      title: "VITRO (Jairosoft)",
+      date: "November 14, 2025",
+      content: (
+        <div className="space-y-6">
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">Collaboration Excellence</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Working with Jairosoft under the VITRO umbrella taught me invaluable lessons about 
+              cross-functional collaboration and agile methodologies in a fast-paced environment.
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">Technical Achievements</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              We delivered several mission-critical applications that serve thousands of users daily. 
+              The emphasis on clean code, thorough testing, and continuous integration became second nature.
+            </p>
+          </div>
+        </div>
+      ),
     },
     {
-      date: "October 28, 2024",
-      title: "The Power of Continuous Learning",
-      content:
-        "In tech, standing still means falling behind. I've committed to learning something new every day, whether it's a new framework, design pattern, or development tool. The journey never ends, and that's what makes it exciting.",
+      id: "davao-911",
+      title: "Davao City Central Communications and Emergency Response Center",
+      date: "November 14, 2025",
+      content: (
+        <div className="space-y-6">
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">Emergency Response Systems</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Building systems for the Davao City emergency response center was one of the most meaningful 
+              projects of my career. Knowing that our work directly impacts public safety and saves lives 
+              added profound purpose to every line of code.
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">Critical System Design</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              We implemented real-time communication protocols, geolocation services, and incident management 
+              systems that operate 24/7. The reliability requirements were absolute - failure was not an option.
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">Impact & Legacy</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              This project reinforced my belief that technology, when applied thoughtfully, can be a force 
+              for tremendous good. It shaped my approach to all subsequent work, always asking: "How does 
+              this help people?"
+            </p>
+          </div>
+        </div>
+      ),
     },
   ];
 
+  const handleJournalClick = (id: string) => {
+    setSelectedJournal(selectedJournal === id ? null : id);
+  };
+
+  const selectedEntry = journals.find((j) => j.id === selectedJournal);
+
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <div className="bg-gradient-to-br from-portfolio-warm-light to-card p-6 sm:p-10 lg:p-12 border-b border-border">
+      {/* Header - Always Centered */}
+      <div className="bg-gradient-to-br from-portfolio-warm-light to-card py-12 px-6">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <BookOpen className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-accent mx-auto mb-3 sm:mb-4" />
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">Journal</h1>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground italic">
-            Thoughts, reflections, and learnings along the way
+          <BookOpen className="w-16 h-16 text-accent mx-auto mb-4" />
+          <h1 className="text-5xl font-bold text-foreground mb-4">Journal</h1>
+          <p className="text-xl text-muted-foreground italic">
+            Thoughts, Learnings, and Reflections
           </p>
         </div>
       </div>
 
-      {/* Journal Entries */}
-      <div className="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
-        <div className="space-y-6 sm:space-y-8">
-          {entries.map((entry, index) => (
-            <article
-              key={index}
-              className="bg-card rounded-lg p-4 sm:p-6 lg:p-8 shadow-sm border border-border hover:shadow-md transition-shadow duration-200 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <time className="text-xs sm:text-sm text-accent font-medium">{entry.date}</time>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-2 mb-3 sm:mb-4">
-                {entry.title}
-              </h2>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{entry.content}</p>
-            </article>
-          ))}
-        </div>
-
-        {/* Decorative Element */}
-        <div className="mt-12 text-center">
-          <div className="inline-block px-6 py-3 bg-muted rounded-full">
-            <p className="text-sm text-muted-foreground italic">
-              More entries coming soon...
-            </p>
+      {/* Main Content Area */}
+      <div className="flex flex-col md:flex-row h-[calc(100vh-280px)] overflow-hidden">
+        {/* Journal List */}
+        <div
+          className={`
+            transition-all duration-300 ease-in-out
+            ${
+              selectedJournal
+                ? "md:w-1/4 h-20 md:h-full overflow-y-auto"
+                : "w-full h-full overflow-y-auto"
+            }
+            bg-card border-r border-border
+            [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
+          `}
+        >
+          <div className="p-4 space-y-3">
+            {journals.map((journal) => (
+              <button
+                key={journal.id}
+                onClick={() => handleJournalClick(journal.id)}
+                className={`
+                  w-full text-left p-4 rounded-lg transition-all duration-200
+                  ${
+                    selectedJournal === journal.id
+                      ? "bg-accent/10 border-2 border-accent"
+                      : "bg-muted hover:bg-muted/70 border-2 border-transparent"
+                  }
+                `}
+              >
+                <h3 className="font-semibold text-foreground truncate mb-1">
+                  {journal.title}
+                </h3>
+                <p className="text-sm text-accent">{journal.date}</p>
+              </button>
+            ))}
           </div>
         </div>
+
+        {/* Content Container */}
+        {selectedJournal && selectedEntry && (
+          <div
+            className={`
+              flex-1 bg-card border-2 border-border overflow-y-auto
+              [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
+              animate-fade-in
+            `}
+          >
+            <div className="p-8 max-w-3xl mx-auto">
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-foreground mb-2">
+                  {selectedEntry.title}
+                </h2>
+                <time className="text-sm text-accent font-medium">
+                  {selectedEntry.date}
+                </time>
+              </div>
+              <div className="prose prose-lg max-w-none">
+                {selectedEntry.content}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
