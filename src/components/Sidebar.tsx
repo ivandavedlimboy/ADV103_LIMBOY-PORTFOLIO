@@ -136,7 +136,7 @@ export const Sidebar = ({ collapsed, setCollapsed }: SidebarProps) => {
               <Moon className="w-5 h-5 flex-shrink-0" />
             )}
             {!collapsed && (
-              <span className="font-medium">{isDark ? "Light Mode" : "Dark Mode"}</span>
+              <span className="font-medium">{isDark ? "Dark Mode" : "Light Mode"}</span>
             )}
           </button>
         </div>
