@@ -149,14 +149,14 @@ const Journal = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="flex flex-col md:flex-row h-[calc(100vh-160px)] overflow-hidden gap-4 px-4 pt-4 pb-2">
+      <div className="flex flex-col md:flex-row h-[calc(100vh-160px)] overflow-hidden gap-4 px-4 pt-4 pb-1">
         {/* Journal List */}
         <div
           className={`
             transition-all duration-300 ease-in-out
             ${
               selectedJournal
-                ? "md:w-1/4 h-[88px] md:h-full overflow-y-auto"
+                ? "md:w-1/4 h-20 md:h-full overflow-y-auto"
                 : "w-full h-full overflow-y-auto"
             }
             bg-background
