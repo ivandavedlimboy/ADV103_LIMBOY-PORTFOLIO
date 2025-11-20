@@ -150,7 +150,7 @@ export const Sidebar = ({ collapsed, setCollapsed }: SidebarProps) => {
             collapsed ? "text-center" : ""
           )}
         >
-          {collapsed ? "©2024" : "© 2024 Ivan Dave Limboy"}
+          {collapsed ? "©2025" : "© 2025 Ivan Dave Limboy"}
         </p>
       </div>
       </aside>
