@@ -37,22 +37,27 @@ export const Education = () => {
         {/* Education Timeline */}
         <div className="bg-card rounded-lg p-4 sm:p-6 shadow-sm border border-border">
           <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Education</h2>
-          <div className="space-y-6">
+          <div className="space-y-0">
             {educationTimeline.map((edu, index) => (
-              <div
-                key={edu.level}
-                className="relative pl-8 pb-6 border-l-2 border-accent last:pb-0 animate-slide-in-left"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-accent border-4 border-background"></div>
-                <div>
-                  <h3 className="font-bold text-foreground text-lg">{edu.level}</h3>
-                  <p className="text-muted-foreground font-medium">{edu.school}</p>
-                  {edu.degree && (
-                    <p className="text-sm text-muted-foreground italic mt-1">{edu.degree}</p>
-                  )}
-                  <p className="text-sm text-accent mt-1">{edu.years}</p>
+              <div key={edu.level}>
+                <div
+                  className="relative pl-8 py-4 border-l-2 border-primary/30 animate-slide-in-left"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div>
+                    <h3 className="font-bold text-foreground text-lg">{edu.level}</h3>
+                    <p className="text-muted-foreground font-medium">{edu.school}</p>
+                    {edu.degree && (
+                      <p className="text-sm text-muted-foreground italic mt-1">{edu.degree}</p>
+                    )}
+                    <p className="text-sm text-primary mt-1">{edu.years}</p>
+                  </div>
                 </div>
+                {index < educationTimeline.length - 1 && (
+                  <div className="relative pl-8 border-l-2 border-primary/30">
+                    <div className="absolute -left-[9px] w-4 h-4 rounded-full bg-primary border-2 border-background shadow-sm"></div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
