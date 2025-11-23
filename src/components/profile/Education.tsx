@@ -35,7 +35,7 @@ export const Education = () => {
     <div className="animate-fade-in p-4 sm:p-6 lg:p-8">
       <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
         {/* Education Timeline */}
-        <div className="bg-card rounded-lg p-4 sm:p-6 shadow-sm">
+        <div className="bg-background rounded-lg p-4 sm:p-6">
           <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Education</h2>
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-primary/30"></div>
@@ -60,7 +60,7 @@ export const Education = () => {
         </div>
 
         {/* Educational Skills */}
-        <div className="bg-portfolio-warm-light rounded-lg p-4 sm:p-6 shadow-sm border border-border">
+        <div className="bg-background rounded-lg p-4 sm:p-6">
           <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Educational Skills</h2>
           <div className="space-y-6">
             {educationalSkills.map((item, index) => (
