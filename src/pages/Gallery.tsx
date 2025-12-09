@@ -1,22 +1,74 @@
 import { useState } from "react";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
+import gallery1 from "@/assets/lobsel.jpg";
+import gallery2 from "@/assets/lob3.jpeg";
+import gallery10 from "@/assets/lobgp.jpeg";
+
+import gallery3 from "@/assets/busel.jpg";
+import gallery8 from "@/assets/bus.jpeg";
+import gallery9 from "@/assets/busb.jpeg";
+
+import gallery11 from "@/assets/pldtbkg.jpeg";
+import gallery12 from "@/assets/pldtv.jpeg";
+import gallery13 from "@/assets/pldtsel.jpeg";
+import gallery14 from "@/assets/pldtb.jpeg";
+import gallery15 from "@/assets/pldtgp.jpeg";
+import gallery16 from "@/assets/vitv.jpeg";
+
+import gallery4 from "@/assets/vikgp1.jpeg";
+import gallery5 from "@/assets/vikgp2.jpeg";
+import gallery6 from "@/assets/vikbkg.jpeg";
+import gallery7 from "@/assets/vikchef.jpeg";
+
+import gallery17 from "@/assets/jaibldg.jpeg";
+import gallery18 from "@/assets/jaipion.jpeg";
+import gallery19 from "@/assets/jaidisc.jpeg";
+import gallery20 from "@/assets/jaisel.jpeg";
+import gallery21 from "@/assets/jaipc.jpeg";
+import gallery22 from "@/assets/jaigp.jpeg";
+
+import gallery23 from "@/assets/911trck.jpeg";
+import gallery24 from "@/assets/911disc.jpeg";
+import gallery25 from "@/assets/911tv.jpeg";
+import gallery26 from "@/assets/911wartv.jpeg";
+import gallery27 from "@/assets/911earth.jpeg";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    { src: gallery1, alt: "Web development workspace" },
-    { src: gallery2, alt: "Abstract design" },
-    { src: gallery3, alt: "UI design mockups" },
-    { src: gallery4, alt: "Programming books" },
-    { src: gallery5, alt: "Team collaboration" },
-    { src: gallery1, alt: "Web development workspace" },
-    { src: gallery2, alt: "Abstract design" },
-    { src: gallery3, alt: "UI design mockups" },
+  { src: gallery1, alt: "lobsel" },
+  { src: gallery2, alt: "lob3" },
+  { src: gallery10, alt: "lob3" },
+
+  { src: gallery3, alt: "busel" },
+  { src: gallery8, alt: "busel" },
+  { src: gallery9, alt: "busel" },
+
+  { src: gallery11, alt: "pldt" },
+  { src: gallery16, alt: "pldt" },
+  { src: gallery12, alt: "pldt" },
+  { src: gallery14, alt: "pldt" },
+  { src: gallery15, alt: "pldt" },
+  { src: gallery13, alt: "pldt" },
+
+  { src: gallery6, alt: "vik" },
+  { src: gallery7, alt: "vik" },
+  { src: gallery4, alt: "vik" },
+  { src: gallery5, alt: "vik" },
+
+  { src: gallery17, alt: "jai" },
+  { src: gallery18, alt: "jai" },
+  { src: gallery19, alt: "jai" },
+  { src: gallery20, alt: "jai" },
+  { src: gallery21, alt: "jai" },
+  { src: gallery22, alt: "jai" },
+
+  { src: gallery23, alt: "911" },
+  { src: gallery24, alt: "911" },
+  { src: gallery25, alt: "911" },
+  { src: gallery26, alt: "911" },
+  { src: gallery27, alt: "911" },
+  
   ];
 
   return (
@@ -25,7 +77,7 @@ const Gallery = () => {
         <div className="mb-8 sm:mb-12 text-center animate-fade-in">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">Gallery</h1>
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground">
-            A collection of my work and inspirations
+            A collection of photo captures from educational tour
           </p>
         </div>
 

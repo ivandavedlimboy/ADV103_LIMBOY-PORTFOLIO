@@ -5,7 +5,8 @@ import { Education } from "@/components/profile/Education";
 import { Achievements } from "@/components/profile/Achievements";
 import { Experience } from "@/components/profile/Experience";
 import { Certifications } from "@/components/profile/Certifications";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/PROFILE.jpg";
+
 
 const ProfileHero = () => {
   return (
@@ -30,11 +31,11 @@ const ProfileHero = () => {
               MY PORTFOLIO
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground italic font-light">
-              celavive come what may
+              Ex ignoto audere melius quam ignarus manere.
             </p>
             <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3 justify-center md:justify-start">
               <span className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium">
-                Web Developer
+                Aspirant
               </span>
               <span className="px-4 py-2 bg-portfolio-warm text-foreground rounded-full text-sm font-medium">
                 UI/UX Designer
@@ -52,7 +53,7 @@ const ProfileHero = () => {
 
 const Profile = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-full bg-background">
       <ProfileHero />
       <ProfileSubheader />
       <div className="bg-card">

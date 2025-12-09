@@ -1,102 +1,147 @@
 import { Award, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
+import cert1 from "@/assets/certdvoet.jpg";
+import cert2 from "@/assets/certchumm.jpg";
+
 export const Certifications = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const certifications = [
     {
-      title: "React Developer Certification",
-      issuer: "Meta",
-      year: "2024",
-      description: "Advanced React development including hooks, context, and performance optimization",
+      title: "CERTIFICATE OF COMPLETION",
+      issuer: "HCDC",
+      year: "2025",
+      description: "Davao Educational Tour",
+      image: cert1,
     },
     {
-      title: "Full Stack Web Development",
-      issuer: "freeCodeCamp",
-      year: "2023",
-      description: "Comprehensive certification covering frontend and backend development",
+      title: "CC105",
+      issuer: "N/A",
+      year: "2025",
+      description: "Codechum",
+      image: cert2,
     },
     {
-      title: "UI/UX Design Fundamentals",
-      issuer: "Google",
-      year: "2023",
-      description: "User interface and user experience design principles and best practices",
+      title: "CERTIFICATE OF COMPLETION",
+      issuer: "PLDT",
+      year: "2025",
+      description: "Davao Educational Tour Participant",
     },
     {
-      title: "Cloud Computing Essentials",
-      issuer: "AWS",
-      year: "2024",
-      description: "Fundamentals of cloud computing and AWS services",
+      title: "CERTIFICATE OF COMPLETION",
+      issuer: "PLDT",
+      year: "2025",
+      description: "Davao Educational Tour Participant",
+    },
+    {
+      title:
+        "CERTIFICATE OF COMPLETION -  Philippine Long Distance Telephone Company",
+      issuer: "VITRO",
+      year: "2025",
+      description: "Davao Educational Tour Participant - Vitro",
+    },
+    {
+      title: "CERTIFICATE OF COMPLETION",
+      issuer: "JAIROSOFT",
+      year: "2025",
+      description: "Davao Educational Tour Participant - Jairososft",
+    },
+    {
+      title: "CERTIFICATE OF COMPLETION",
+      issuer: "DCCCERC",
+      year: "2025",
+      description:
+        "Davao Educational Tour Participant - Davao Central Communications and Emergency Response Center",
     },
   ];
 
-  const next = () => {
+  const next = () =>
     setCurrentIndex((prev) => (prev + 1) % certifications.length);
-  };
 
-  const prev = () => {
-    setCurrentIndex((prev) => (prev - 1 + certifications.length) % certifications.length);
-  };
+  const prev = () =>
+    setCurrentIndex(
+      (prev) => (prev - 1 + certifications.length) % certifications.length
+    );
 
   return (
     <div className="animate-fade-in p-4 sm:p-6 lg:p-8">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8 text-center">Certifications</h2>
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8 text-center">
+          Certifications
+        </h2>
 
-        <div className="relative">
-          {/* Main Certificate Display */}
-          <div className="bg-gradient-to-br from-card to-portfolio-warm-light rounded-lg p-6 sm:p-8 lg:p-10 shadow-xl border-2 border-accent/20 min-h-[280px] sm:min-h-[320px] flex flex-col justify-center">
-            <div className="text-center">
-              <Award className="w-16 h-16 sm:w-20 sm:h-20 text-accent mb-4 sm:mb-6 mx-auto animate-scale-in" />
-              <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
-                {certifications[currentIndex].title}
-              </h3>
-              <p className="text-lg sm:text-xl text-accent font-semibold mb-2">
-                {certifications[currentIndex].issuer}
-              </p>
-              <p className="text-sm sm:text-base text-muted-foreground font-medium mb-4">
-                {certifications[currentIndex].year}
-              </p>
-              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto px-4">
-                {certifications[currentIndex].description}
-              </p>
-            </div>
-          </div>
+        <div className="relative bg-gradient-to-br from-portfolio-warm-light to-card rounded-lg p-4 sm:p-6 lg:p-8 shadow-lg border border-border">
 
-          {/* Navigation */}
-          <div className="flex justify-between items-center mt-8">
+          {/* Image/Card + Navigation Arrows */}
+          <div className="relative w-full h-[360px] sm:h-[420px] flex items-center justify-center">
+
+            {/* Previous Arrow */}
             <button
               onClick={prev}
-              className="p-3 rounded-full bg-card hover:bg-accent hover:text-accent-foreground transition-all duration-200 border border-border shadow-sm"
+              className="absolute left-2 sm:left-4 p-2 rounded-full bg-card hover:bg-secondary transition-colors border border-border z-10"
               aria-label="Previous certification"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-6 h-6 text-foreground" />
             </button>
 
-            {/* Dots Indicator */}
-            <div className="flex gap-3">
-              {certifications.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`transition-all duration-200 ${
-                    index === currentIndex
-                      ? "bg-accent w-8 h-3 rounded-full"
-                      : "bg-muted hover:bg-muted-foreground w-3 h-3 rounded-full"
-                  }`}
-                  aria-label={`Go to certification ${index + 1}`}
-                />
-              ))}
+            {/* Card Display */}
+            <div className="w-full h-full flex flex-col items-center justify-center">
+              {certifications[currentIndex].image ? (
+                <div className="w-full h-full overflow-hidden rounded-lg">
+                  <img
+                    src={certifications[currentIndex].image}
+                    alt={certifications[currentIndex].title}
+                    className="w-full h-full object-cover rounded-lg object-center"
+                  />
+                </div>
+              ) : (
+                <div className="h-full flex flex-col items-center justify-center text-center">
+                  <Award className="w-12 h-12 sm:w-16 sm:h-16 text-accent mb-4 sm:mb-6 animate-scale-in" />
+
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+                    {certifications[currentIndex].title}
+                  </h3>
+
+                  <p className="text-accent font-semibold text-base sm:text-lg mb-1">
+                    {certifications[currentIndex].issuer}
+                  </p>
+
+                  <p className="text-sm sm:text-base text-muted-foreground font-medium mb-4">
+                    {certifications[currentIndex].year}
+                  </p>
+
+                  <p className="text-sm sm:text-base text-muted-foreground max-w-md px-4">
+                    {certifications[currentIndex].description}
+                  </p>
+                </div>
+              )}
             </div>
 
+            {/* Next Arrow */}
             <button
               onClick={next}
-              className="p-3 rounded-full bg-card hover:bg-accent hover:text-accent-foreground transition-all duration-200 border border-border shadow-sm"
+              className="absolute right-2 sm:right-4 p-2 rounded-full bg-card hover:bg-secondary transition-colors border border-border z-10"
               aria-label="Next certification"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-6 h-6 text-foreground" />
             </button>
+          </div>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center gap-2 mt-4">
+            {certifications.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                  index === currentIndex
+                    ? "bg-accent w-6"
+                    : "bg-muted hover:bg-muted-foreground"
+                }`}
+                aria-label={`Go to certification ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>

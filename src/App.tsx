@@ -8,7 +8,6 @@ import { Sidebar } from "@/components/Sidebar";
 import Profile from "./pages/Profile";
 import Gallery from "./pages/Gallery";
 import Journal from "./pages/Journal";
-import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -21,15 +20,15 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="flex min-h-screen w-full bg-background">
+          <div className="fixed inset-0 flex w-full bg-background">
             <Sidebar collapsed={sidebarCollapsed} setCollapsed={setSidebarCollapsed} />
-            <main className={`flex-1 transition-all duration-300 ${sidebarCollapsed ? 'md:ml-16' : 'md:ml-64'}`}>
+             <main className={`flex-1 overflow-y-auto transition-all duration-300 ${sidebarCollapsed ? 'md:ml-16' : 'md:ml-64'}`}>
               <Routes>
                 <Route path="/" element={<Profile />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/journal" element={<Journal />} />
-                <Route path="*" element={<NotFound />} />
+                <Route path="*" element={<Profile />} />
               </Routes>
             </main>
           </div>

@@ -14,6 +14,10 @@ export const ProfileSubheader = () => {
   const [activeTab, setActiveTab] = useState("personal");
 
   useEffect(() => {
+    // Get the scrollable container (main element)
+    const scrollContainer = document.querySelector('main');
+    if (!scrollContainer) return;
+
     const handleScroll = () => {
       const sections = tabs.map(tab => ({
         id: tab.id,
@@ -21,7 +25,7 @@ export const ProfileSubheader = () => {
       }));
 
       // Find which section is currently in view with better accuracy
-      const scrollPosition = window.scrollY + 100; // Offset for header
+      const scrollPosition = scrollContainer.scrollTop + 100; // Offset for header
       
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -36,19 +40,20 @@ export const ProfileSubheader = () => {
     };
 
     handleScroll(); // Initial check
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    scrollContainer.addEventListener("scroll", handleScroll);
+    return () => scrollContainer.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    if (element) {
+    const scrollContainer = document.querySelector('main');
+    if (element && scrollContainer) {
       // Get the subheader height dynamically
       const subheaderHeight = 60; // Approximate subheader height
       const elementPosition = element.offsetTop;
       const offsetPosition = elementPosition - subheaderHeight;
 
-      window.scrollTo({
+      scrollContainer.scrollTo({
         top: offsetPosition,
         behavior: "smooth",
       });
@@ -72,7 +77,7 @@ export const ProfileSubheader = () => {
                 "border-r border-border",
                 isActive
                   ? "bg-card text-foreground border-b-2 border-b-accent"
-                  : "bg-secondary/50 text-muted-foreground hover:bg-secondary hover:text-foreground",
+                  : "bg-secondary/50 text-muted-foreground hover:bg-portfolio-warm hover:text-foreground",
                 index === 0 && "rounded-tl-lg",
                 "folder-tab"
               )}

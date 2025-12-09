@@ -1,39 +1,53 @@
 export const Experience = () => {
   const experiences = [
     {
-      role: "Web Developer Intern",
-      organization: "Tech Solutions Inc.",
-      year: "2023",
-      description: "Developed responsive web applications using React and Node.js",
+      role: "Call Center Agent",
+      organization: "iQor Philippines",
+      year: "2021",
+      description: "Contractual work from home employee assigned to Potpouri",
     },
     {
-      role: "Frontend Developer",
-      organization: "Digital Agency Co.",
-      year: "2024",
-      description: "Created modern UI/UX designs and implemented them using React and Tailwind CSS",
+      role: "Call Center Agent",
+      organization: "Concentrix",
+      year: "2022",
+      description: "Contractual employee assigned to Handy",
     },
     {
-      role: "IT Support",
-      organization: "University of Mindanao",
-      year: "2023 - 2024",
-      description: "Provided technical support and maintenance for campus computer systems",
+      role: "Developer",
+      organization: "Simple Dough",
+      year: "2025",
+      description: "A member of a school project - Created modern UI/UX designs and implemented them using React and Tailwind CSS, with structured relational database using supabase",
+    },
+    {
+      role: "Co-Author",
+      year: "2025",
+      description: "Co-Author of a school research project: Security Vulnerabilities in Public Wi-Fi Networks: An Experimental Analysis of Risk Exposure ",
+    },
+    {
+      role: "Participant",
+      year: "2025",
+      description: "Participated amongst my fellow students on attending the one-day Educational Tour held by Holy Cross of Davao college in Davao city",
     },
   ];
 
   const itSkills = [
-    { skill: "React.js", level: 90 },
-    { skill: "TypeScript", level: 85 },
-    { skill: "Node.js", level: 80 },
-    { skill: "Tailwind CSS", level: 95 },
-    { skill: "Git & GitHub", level: 85 },
-    { skill: "SQL & NoSQL", level: 75 },
+    { skill: "Figma/Wireframing", level: 91 },
+    { skill: "HTML & CSS", level: 91 },
+    { skill: "JavaScript", level: 85 },
+    { skill: "React.js", level: 84 },
+    { skill: "React-Native", level: 83 },
+    { skill: "GitHub", level: 89 },
+    { skill: "SQL & NoSQL", level: 82 },
+    { skill: "Cloud Basics", level: 84 },
+    { skill: "Django", level: 83 },
+    { skill: "Office Productivity Tools", level: 91 },
   ];
 
   return (
     <div className="animate-fade-in p-4 sm:p-6 lg:p-8">
       <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
         {/* Experience */}
-        <div className="bg-background rounded-lg p-4 sm:p-6">
+        <div className="bg-card rounded-lg p-4 sm:p-6 border border-border">
           <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Experience</h2>
           <div className="space-y-6">
             {experiences.map((exp, index) => (
@@ -52,7 +66,7 @@ export const Experience = () => {
         </div>
 
         {/* IT Skills */}
-        <div className="bg-background rounded-lg p-4 sm:p-6">
+        <div className="bg-background rounded-lg p-4 sm:p-6 border border-border">
           <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">IT Skills</h2>
           <div className="space-y-6">
             {itSkills.map((item, index) => (
@@ -64,7 +78,7 @@ export const Experience = () => {
                 <div className="flex justify-between mb-2">
                   <span className="font-medium text-foreground">{item.skill}</span>
                 </div>
-                <div className="h-3 bg-secondary rounded-full overflow-hidden">
+                <div className="h-3 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-gradient-to-r from-portfolio-cool to-accent rounded-full transition-all duration-1000 ease-out"
                     style={{

@@ -3,11 +3,11 @@ import { Mail, Phone, Facebook, Linkedin, Github, Globe } from "lucide-react";
 export const Contacts = () => {
   const contacts = [
     {
-      icon: Facebook,
-      label: "Facebook",
-      value: "Ivandave Limboy",
-      link: "https://facebook.com",
-      color: "text-blue-600",
+      icon: Phone,
+      label: "Phone",
+      value: "09087488276",
+      link: "",
+      color: "text-green-600",
     },
     {
       icon: Mail,
@@ -17,17 +17,17 @@ export const Contacts = () => {
       color: "text-red-600",
     },
     {
-      icon: Phone,
-      label: "Phone",
-      value: "09087488276",
-      link: "tel:09087488276",
-      color: "text-green-600",
+      icon: Facebook,
+      label: "Facebook",
+      value: "Ivandave Limboy",
+      link: "https://www.facebook.com/ivandave.limboy",
+      color: "text-blue-600",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/ivandavelimboy",
-      link: "https://linkedin.com/in/ivandavelimboy",
+      value: "jobstreet.com/ivandave-limboy",
+      link: "https://sg.jobstreet.com/profiles/ivandave-limboy-3JH41blBRJ",
       color: "text-blue-700",
     },
     {
@@ -41,7 +41,7 @@ export const Contacts = () => {
       icon: Globe,
       label: "Portfolio",
       value: "ivandave-portfolio.vercel.app",
-      link: "https://ivandave-portfolio.vercel.app",
+      link: "https://vercel.com/ivandavedlimboys-projects",
       color: "text-accent",
     },
   ];
@@ -63,8 +63,9 @@ export const Contacts = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-secondary transition-transform duration-200 group-hover:scale-110">
-                  <Icon className="w-6 h-6 text-primary" />
+                <div className="p-3 rounded-full bg-secondary transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-accent group-hover:to-portfolio-cool group-hover:scale-110
+  ">
+                  <Icon className="w-6 h-6 text-primary group-hover:text-white dark:group-hover:text-black transition-colors duration-300"/>
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-semibold text-foreground mb-1">{contact.label}</h3>

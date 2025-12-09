@@ -159,7 +159,7 @@ export const Sidebar = ({ collapsed, setCollapsed }: SidebarProps) => {
       <button
         onClick={() => setCollapsed(false)}
         className={cn(
-          "fixed top-4 left-4 z-30 md:hidden bg-sidebar border border-sidebar-border rounded-lg p-2 shadow-lg",
+          "fixed top-4 left-4 z-50 md:hidden bg-sidebar border border-sidebar-border rounded-lg p-2 shadow-lg",
           !collapsed && "hidden"
         )}
         aria-label="Open menu"
