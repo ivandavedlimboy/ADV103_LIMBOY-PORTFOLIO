@@ -34,14 +34,17 @@ const ProfileHero = () => {
               Ex ignoto audere melius quam ignarus manere.
             </p>
             <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3 justify-center md:justify-start">
-              <span className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium">
-                Aspirant
-              </span>
-              <span className="px-4 py-2 bg-portfolio-warm text-foreground rounded-full text-sm font-medium">
-                UI/UX Designer
-              </span>
               <span className="px-4 py-2 bg-card border border-border text-foreground rounded-full text-sm font-medium">
                 IT Student
+              </span>
+              <span className="px-4 py-2 bg-portfolio-warm text-foreground rounded-full text-sm font-medium">
+                React UI/UX
+              </span>
+               <span className="px-4 py-2 bg-portfolio-warm text-foreground rounded-full text-sm font-medium">
+                Supabase
+              </span>
+              <span className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium">
+                Aspirant
               </span>
             </div>
           </div>
