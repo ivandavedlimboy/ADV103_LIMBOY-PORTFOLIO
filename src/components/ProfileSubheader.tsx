@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const tabs = [
   { id: "personal", label: "Personal Info" },
-  { id: "contact", label: "Contact Me" },
+  { id: "contact", label: "Contact" },
   { id: "education", label: "Education" },
   { id: "awards", label: "Achievements" },
   { id: "experience", label: "Experience" },

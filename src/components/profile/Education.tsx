@@ -24,13 +24,13 @@ export const Education = () => {
   ];
 
   const educationalSkills = [
-    { skill: "Algebra", level: 88 },
-    { skill: "Discrete Mathematics", level: 85 },
-    { skill: "General Science", level: 82 },
+    { skill: "Algebra", level: 90 },
+    { skill: "Discrete Mathematics", level: 86 },
+    { skill: "General Science", level: 85 },
     { skill: "Information Technology", level: 91 },
-    { skill: "Literature", level: 88 },
-    { skill: "Creative Writing", level: 94 },
-    { skill: "Visual Arts", level: 93 },
+    { skill: "Literature", level: 89 },
+    { skill: "Creative Writing", level: 93 },
+    { skill: "Visual Arts", level: 91 },
   ];
 
   return (

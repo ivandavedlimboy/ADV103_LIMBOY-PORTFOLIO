@@ -2,10 +2,11 @@ import { useState } from "react";
 import gallery1 from "@/assets/lobsel.jpg";
 import gallery2 from "@/assets/lob3.jpeg";
 import gallery10 from "@/assets/lobgp.jpeg";
+import gallery28 from "@/assets/attendance.jpeg";
 
-import gallery3 from "@/assets/busel.jpg";
 import gallery8 from "@/assets/bus.jpeg";
-import gallery9 from "@/assets/busb.jpeg";
+import gallery9 from "@/assets/busel.jpg";
+import gallery29 from "@/assets/busend.jpeg";
 
 import gallery11 from "@/assets/pldtbkg.jpeg";
 import gallery12 from "@/assets/pldtv.jpeg";
@@ -13,6 +14,7 @@ import gallery13 from "@/assets/pldtsel.jpeg";
 import gallery14 from "@/assets/pldtb.jpeg";
 import gallery15 from "@/assets/pldtgp.jpeg";
 import gallery16 from "@/assets/vitv.jpeg";
+import gallery3 from "@/assets/vitv2.jpeg";
 
 import gallery4 from "@/assets/vikgp1.jpeg";
 import gallery5 from "@/assets/vikgp2.jpeg";
@@ -31,22 +33,26 @@ import gallery24 from "@/assets/911disc.jpeg";
 import gallery25 from "@/assets/911tv.jpeg";
 import gallery26 from "@/assets/911wartv.jpeg";
 import gallery27 from "@/assets/911earth.jpeg";
+import gallery30 from "@/assets/911bkg.jpeg";
+import gallery31 from "@/assets/911cctv.jpeg";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
   { src: gallery1, alt: "lobsel" },
+  { src: gallery28, alt: "att" },
   { src: gallery2, alt: "lob3" },
   { src: gallery10, alt: "lob3" },
 
-  { src: gallery3, alt: "busel" },
-  { src: gallery8, alt: "busel" },
-  { src: gallery9, alt: "busel" },
+  { src: gallery29, alt: "bus" },
+  { src: gallery8, alt: "bus" },
+  { src: gallery9, alt: "bus" },
 
   { src: gallery11, alt: "pldt" },
-  { src: gallery16, alt: "pldt" },
   { src: gallery12, alt: "pldt" },
+  { src: gallery16, alt: "pldt" },
+  { src: gallery3, alt: "pldt" },
   { src: gallery14, alt: "pldt" },
   { src: gallery15, alt: "pldt" },
   { src: gallery13, alt: "pldt" },
@@ -68,6 +74,8 @@ const Gallery = () => {
   { src: gallery25, alt: "911" },
   { src: gallery26, alt: "911" },
   { src: gallery27, alt: "911" },
+  { src: gallery31, alt: "911" },
+  { src: gallery30, alt: "911" },
   
   ];
 
@@ -77,7 +85,7 @@ const Gallery = () => {
         <div className="mb-8 sm:mb-12 text-center animate-fade-in">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">Gallery</h1>
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground">
-            A collection of photo captures from educational tour
+            A collection of photo captures from Davao Educational Tour
           </p>
         </div>
 

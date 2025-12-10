@@ -41,7 +41,7 @@ export const Contacts = () => {
       icon: Globe,
       label: "Portfolio",
       value: "ivandave-portfolio.vercel.app",
-      link: "https://vercel.com/ivandavedlimboys-projects",
+      link: "https://vercel.com/ivandavedlimboys-projects/adv-103-limboy-portfolio",
       color: "text-accent",
     },
   ];

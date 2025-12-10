@@ -30,18 +30,15 @@ const ProfileHero = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-3 sm:mb-4 tracking-tight">
               MY PORTFOLIO
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground italic font-light">
-              Ex ignoto audere melius quam ignarus manere.
+            <p className="ml-[40px] text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground italic font-light">
+              Non sum perfectus, nec ullo modo bonus, sed conabor melior fieri.
             </p>
             <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3 justify-center md:justify-start">
               <span className="px-4 py-2 bg-card border border-border text-foreground rounded-full text-sm font-medium">
                 IT Student
               </span>
               <span className="px-4 py-2 bg-portfolio-warm text-foreground rounded-full text-sm font-medium">
-                React UI/UX
-              </span>
-               <span className="px-4 py-2 bg-portfolio-warm text-foreground rounded-full text-sm font-medium">
-                Supabase
+                Starter
               </span>
               <span className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium">
                 Aspirant

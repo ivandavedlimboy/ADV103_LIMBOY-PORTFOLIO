@@ -5,7 +5,7 @@ export const PersonalInfo = () => {
     { label: "Age", value: "22" },
     { label: "Birthdate", value: "June 13, 2003" },
     { label: "Nationality", value: "Filipino" },
-    { label: "Address", value: "Upper Madapo" },
+    { label: "Address", value: "Upper Madapo Hills, Bankerohan" },
     { label: "Street", value: "Brgy. 8-A, Purok 9-A" },
     { label: "City", value: "Davao City" },
     { label: "Zip code", value: "8000" },

@@ -4,24 +4,24 @@ export const Experience = () => {
       role: "Call Center Agent",
       organization: "iQor Philippines",
       year: "2021",
-      description: "Contractual work from home employee assigned to Potpouri",
+      description: "Contractual WFH employee assigned to Potpouri",
     },
     {
       role: "Call Center Agent",
       organization: "Concentrix",
       year: "2022",
-      description: "Contractual employee assigned to Handy",
+      description: "Contractual onsite employee assigned to Handy",
     },
     {
       role: "Developer",
       organization: "Simple Dough",
       year: "2025",
-      description: "A member of a school project - Created modern UI/UX designs and implemented them using React and Tailwind CSS, with structured relational database using supabase",
+      description: "A member of a school project - Created modern UI/UX designs and implemented them using React and Tailwind CSS, and formed the structured relational database using supabase",
     },
     {
       role: "Co-Author",
       year: "2025",
-      description: "Co-Author of a school research project: Security Vulnerabilities in Public Wi-Fi Networks: An Experimental Analysis of Risk Exposure ",
+      description: "Co-Author of a school research project: Security Vulnerabilities in Public Wi-Fi Networks: An Experimental Analysis of Risk Exposure",
     },
     {
       role: "Participant",
@@ -31,16 +31,16 @@ export const Experience = () => {
   ];
 
   const itSkills = [
-    { skill: "Figma/Wireframing", level: 91 },
-    { skill: "HTML & CSS", level: 91 },
-    { skill: "JavaScript", level: 85 },
-    { skill: "React.js", level: 84 },
-    { skill: "React-Native", level: 83 },
+    { skill: "Figma/Wireframing", level: 88 },
+    { skill: "HTML & CSS", level: 88 },
+    { skill: "JavaScript", level: 83 },
+    { skill: "React.js", level: 85 },
+    { skill: "React-Native", level: 82 },
     { skill: "GitHub", level: 89 },
-    { skill: "SQL & NoSQL", level: 82 },
-    { skill: "Cloud Basics", level: 84 },
-    { skill: "Django", level: 83 },
-    { skill: "Office Productivity Tools", level: 91 },
+    { skill: "SQL & NoSQL", level: 86 },
+    { skill: "Cloud Basics", level: 85 },
+    { skill: "Django", level: 82 },
+    { skill: "Office Productivity Tools", level: 89 },
   ];
 
   return (
