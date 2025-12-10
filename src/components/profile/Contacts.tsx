@@ -34,7 +34,7 @@ export const Contacts = () => {
       icon: Github,
       label: "GitHub",
       value: "github.com/ivandavelimboy",
-      link: "https://github.com/ivandavelimboy",
+      link: "https://github.com/ivandavedlimboy/ADV103_LIMBOY-PORTFOLIO",
       color: "text-gray-800",
     },
     {
