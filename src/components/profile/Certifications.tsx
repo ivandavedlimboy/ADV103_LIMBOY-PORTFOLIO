@@ -22,38 +22,38 @@ export const Certifications = () => {
       description: "Codechum",
       image: cert2,
     },
-    {
-      title: "CERTIFICATE OF COMPLETION",
-      issuer: "PLDT",
-      year: "2025",
-      description: "Davao Educational Tour Participant",
-    },
-    {
-      title: "CERTIFICATE OF COMPLETION",
-      issuer: "PLDT",
-      year: "2025",
-      description: "Davao Educational Tour Participant - Philippine Long Distance Telephone Company",
-    },
-    {
-      title:
-        "CERTIFICATE OF COMPLETION",
-      issuer: "VITRO",
-      year: "2025",
-      description: "Davao Educational Tour Participant - Philippine Long Distance Telephone Company: Vitro",
-    },
-    {
-      title: "CERTIFICATE OF COMPLETION",
-      issuer: "JAIROSOFT",
-      year: "2025",
-      description: "Davao Educational Tour Participant - Jairososft",
-    },
-    {
-      title: "CERTIFICATE OF COMPLETION",
-      issuer: "DCCCERC",
-      year: "2025",
-      description:
-        "Davao Educational Tour Participant - Davao City Central Communications and Emergency Response Center",
-    },
+  //   {
+  //     title: "CERTIFICATE OF COMPLETION",
+  //     issuer: "PLDT",
+  //     year: "2025",
+  //     description: "Davao Educational Tour Participant",
+  //   },
+  //   {
+  //     title: "CERTIFICATE OF COMPLETION",
+  //     issuer: "PLDT",
+  //     year: "2025",
+  //     description: "Davao Educational Tour Participant - Philippine Long Distance Telephone Company",
+  //   },
+  //   {
+  //     title:
+  //       "CERTIFICATE OF COMPLETION",
+  //     issuer: "VITRO",
+  //     year: "2025",
+  //     description: "Davao Educational Tour Participant - Philippine Long Distance Telephone Company: Vitro",
+  //   },
+  //   {
+  //     title: "CERTIFICATE OF COMPLETION",
+  //     issuer: "JAIROSOFT",
+  //     year: "2025",
+  //     description: "Davao Educational Tour Participant - Jairososft",
+  //   },
+  //   {
+  //     title: "CERTIFICATE OF COMPLETION",
+  //     issuer: "DCCCERC",
+  //     year: "2025",
+  //     description:
+  //       "Davao Educational Tour Participant - Davao City Central Communications and Emergency Response Center",
+  //   },
   ];
 
   const next = () =>
@@ -74,7 +74,7 @@ export const Certifications = () => {
         <div className="relative bg-gradient-to-br from-portfolio-warm-light to-card rounded-lg p-4 sm:p-6 lg:p-8 shadow-lg border border-border">
 
           {/* Image/Card + Navigation Arrows */}
-          <div className="relative w-full h-[280px] sm:h-[400px] flex items-center justify-center">
+          <div className="relative w-full h-[280px] sm:h-[400px] lg:h-[700px] flex items-center justify-center">
 
             {/* Previous Arrow */}
             <button
